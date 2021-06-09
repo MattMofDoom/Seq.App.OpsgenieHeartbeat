@@ -9,7 +9,7 @@
       This can be used as a means to implement OpsGenie heartbeats with the Heartbeat API. More information at https://support.atlassian.com/opsgenie/docs/add-heartbeats-to-monitor-external-systems/
     </Description>
     <Authors>Matt Marlor</Authors>
-    <PackageTags>seq-app</PackageTags>
+    <PackageTags>seq-app,OpsGenie,heartbeat</PackageTags>
     <PackageIconUrl></PackageIconUrl>
     <PackageProjectUrl>https://github.com/MattMofDoom/Seq.App.OpsgenieHeartbeat</PackageProjectUrl>
     <RepositoryUrl>https://github.com/MattMofDoom/Seq.App.OpsgenieHeartbeat</RepositoryUrl>
@@ -18,7 +18,7 @@
     <TreatSpecificWarningsAsErrors />
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.0.0</Version>
+    <Version>1.0.2</Version>
     <ApplicationIcon>seq-app-opsgenieheartbeat.ico</ApplicationIcon>
     <PackageIcon>seq-app-opsgenieheartbeat.png</PackageIcon>
     <PackageReleaseNotes>- Simplified implementation over Seq.Input.OpsGenieHeartbeat</PackageReleaseNotes>

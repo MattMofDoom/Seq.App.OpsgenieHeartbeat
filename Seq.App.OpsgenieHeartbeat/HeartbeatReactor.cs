@@ -32,7 +32,8 @@ namespace Seq.App.OpsGenieHeartbeat
         [SeqAppSetting(
             DisplayName = "API key",
             IsOptional = true,
-            HelpText = "The API key for OpsGenie.")]
+            HelpText = "The API key for OpsGenie.",
+            InputType = SettingInputType.Password)]
         public string ApiKey { get; set; }
 
         [SeqAppSetting(
@@ -130,11 +131,11 @@ namespace Seq.App.OpsGenieHeartbeat
             {
                 case 202:
                     LogEvent(LogEventLevel.Debug,
-                        "{AppName} {Method} {TargetUrl} {Outcome} with status code {StatusCode} in {Elapsed:0.000} ms");
+                        "{AppName} send Heartbeat to {TargetUrl} : Status code {StatusCode} in {Elapsed:0.000} ms", App.Title, TargetUrl, statusCode.Result, sw.Elapsed.TotalMilliseconds);
                     break;
                 default:
                     LogEvent(LogEventLevel.Warning,
-                        "{AppName} {Method} {TargetUrl} {Outcome} with status code {StatusCode} in {Elapsed:0.000} ms");
+                        "{AppName} send Heartbeat to {TargetUrl} : Status code {StatusCode} in {Elapsed:0.000} ms", App.Title, TargetUrl, statusCode.Result, sw.Elapsed.TotalMilliseconds);
                     break;
             }
         }
