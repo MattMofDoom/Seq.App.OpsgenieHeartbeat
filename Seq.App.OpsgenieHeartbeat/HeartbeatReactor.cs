@@ -14,6 +14,7 @@ namespace Seq.App.OpsGenieHeartbeat
     public class HeartbeatReactor : SeqApp
     {
         private Timer _timer; // ReSharper disable UnusedAutoPropertyAccessor.Global
+
         // ReSharper disable AutoPropertyCanBeMadeGetOnly.Global
         // ReSharper disable MemberCanBePrivate.Global
         [SeqAppSetting(

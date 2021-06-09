@@ -26,7 +26,7 @@ namespace Seq.App.OpsGenieHeartbeat
         }
 
         /// <summary>
-        /// Send a Heartbeat to the configured OpsGenie URL using the configured API key
+        ///     Send a Heartbeat to the configured OpsGenie URL using the configured API key
         /// </summary>
         /// <param name="apiUrl"></param>
         /// <param name="apiKey"></param>
