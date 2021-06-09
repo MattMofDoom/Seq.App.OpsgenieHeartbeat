@@ -31,7 +31,6 @@ namespace Seq.App.OpsGenieHeartbeat
 
         [SeqAppSetting(
             DisplayName = "API key",
-            IsOptional = true,
             HelpText = "The API key for OpsGenie.",
             InputType = SettingInputType.Password)]
         public string ApiKey { get; set; }
