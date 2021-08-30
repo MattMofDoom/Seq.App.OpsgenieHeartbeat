@@ -7,9 +7,11 @@
       Seq OpsGenie Heartbeat: periodically GET an OpsGenie Heartbeat.
 
       This can be used as a means to implement OpsGenie heartbeats with the Heartbeat API. More information at https://support.atlassian.com/opsgenie/docs/add-heartbeats-to-monitor-external-systems/
+
+      Note: Supersededes Seq.Input.OpsGenieHeartbeat
     </Description>
     <Authors>Matt Marlor</Authors>
-    <PackageTags>seq-app,OpsGenie,heartbeat</PackageTags>
+    <PackageTags>seq-app seq OpsGenie heartbeat ping downtime detection</PackageTags>
     <PackageIconUrl></PackageIconUrl>
     <PackageProjectUrl>https://github.com/MattMofDoom/Seq.App.OpsgenieHeartbeat</PackageProjectUrl>
     <RepositoryUrl>https://github.com/MattMofDoom/Seq.App.OpsgenieHeartbeat</RepositoryUrl>
@@ -17,11 +19,12 @@
     <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
     <TreatSpecificWarningsAsErrors />
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.0.3</Version>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <Version>1.0.4</Version>
     <ApplicationIcon>seq-app-opsgenieheartbeat.ico</ApplicationIcon>
     <PackageIcon>seq-app-opsgenieheartbeat.png</PackageIcon>
-    <PackageReleaseNotes>- Simplified implementation over Seq.Input.OpsGenieHeartbeat</PackageReleaseNotes>
+    <PackageReleaseNotes>- Simplified implementation over Seq.Input.OpsGenieHeartbeat
+- Correct heartbeat interval to be mandatory</PackageReleaseNotes>
     <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
   </PropertyGroup>
 
@@ -46,9 +49,10 @@
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
-    <None Include="./obj/publish/**/*" Exclude="./obj/publish/Seq.Apps.OpsGenieHeartbeat.dll;./obj/publish/Seq.Apps.dll;./obj/publish/Serilog.dll" Pack="true" PackagePath="lib/$(TargetFramework)" />
-    <None Include="./bin/release/$(TargetFramework)/Flurl.dll" Pack="true" PackagePath="lib/$(TargetFramework)" />
-    <None Include="./bin/release/$(TargetFramework)/Flurl.Http.dll" Pack="true" PackagePath="lib/$(TargetFramework)" />
+    <None Include="$(OutDir)/**/Flurl.Http.dll;$(OutDir)/**/Flurl.dll;" Exclude="$(OutDir)/$(MSBuildProjectName).dll;$(OutDir)/Seq.Apps.dll;$(OutDir)/Serilog.dll" Pack="true" PackagePath="lib/$(TargetFramework)" />
+    <!--<None Include="./obj/publish/**/*" Exclude="./obj/publish/Seq.Apps.OpsGenieHeartbeat.dll;./obj/publish/Seq.Apps.dll;./obj/publish/Serilog.dll" Pack="true" PackagePath="lib/$(TargetFramework)" />-->
+    <!--<None Include="./bin/release/$(TargetFramework)/Flurl.dll" Pack="true" PackagePath="lib/$(TargetFramework)" />
+    <None Include="./bin/release/$(TargetFramework)/Flurl.Http.dll" Pack="true" PackagePath="lib/$(TargetFramework)" />-->
   </ItemGroup>
 
 </Project>
