@@ -25,7 +25,7 @@ namespace Seq.App.OpsGenieHeartbeat
 
         [SeqAppSetting(
             DisplayName = "Interval (seconds)",
-            IsOptional = true,
+            IsOptional = false,
             HelpText = "The time between checks; the default is 60.")]
         public int IntervalSeconds { get; set; } = 60;
 
@@ -43,7 +43,8 @@ namespace Seq.App.OpsGenieHeartbeat
 
         [SeqAppSetting(
             DisplayName = "Proxy bypass local addresses",
-            HelpText = "Bypass local addresses for proxy.")]
+            HelpText = "Bypass local addresses for proxy.",
+            IsOptional = true)]
         public bool BypassLocal { get; set; }
 
         [SeqAppSetting(
