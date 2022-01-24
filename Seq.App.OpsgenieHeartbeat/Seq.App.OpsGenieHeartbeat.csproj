@@ -33,11 +33,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Flurl" Version="3.0.2" />
-    <PackageReference Include="Flurl.Http" Version="3.2.0">
+    <PackageReference Include="Flurl" Version="3.0.3" />
+    <PackageReference Include="Flurl.Http" Version="3.2.1">
       <GeneratePathProperty>true</GeneratePathProperty>
     </PackageReference>
-    <PackageReference Include="Seq.Apps" Version="5.1.0" />
+    <PackageReference Include="Seq.Apps" Version="2021.4.0" />
   </ItemGroup>
 
   <ItemGroup>
