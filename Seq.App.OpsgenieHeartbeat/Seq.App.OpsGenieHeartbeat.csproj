@@ -20,11 +20,14 @@
     <TreatSpecificWarningsAsErrors />
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
-    <Version>1.0.4</Version>
+    <Version>1.0.5</Version>
     <ApplicationIcon>seq-app-opsgenieheartbeat.ico</ApplicationIcon>
     <PackageIcon>seq-app-opsgenieheartbeat.png</PackageIcon>
-    <PackageReleaseNotes>- Simplified implementation over Seq.Input.OpsGenieHeartbeat
-- Correct heartbeat interval to be mandatory</PackageReleaseNotes>
+    <PackageReleaseNotes>
+      - Simplified implementation over Seq.Input.OpsGenieHeartbeat
+      - Correct heartbeat interval to be mandatory
+      - Update dependencies
+    </PackageReleaseNotes>
     <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
   </PropertyGroup>
 
@@ -49,7 +52,9 @@
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
-    <None Include="$(OutDir)/**/Flurl.Http.dll;$(OutDir)/**/Flurl.dll;" Exclude="$(OutDir)/$(MSBuildProjectName).dll;$(OutDir)/Seq.Apps.dll;$(OutDir)/Serilog.dll" Pack="true" PackagePath="lib/$(TargetFramework)" />
+    <None Include="$(OutDir)/**/Flurl.Http.dll;$(OutDir)/**/Flurl.dll;"
+          Exclude="$(OutDir)/$(MSBuildProjectName).dll;$(OutDir)/Seq.Apps.dll;$(OutDir)/Serilog.dll" Pack="true"
+          PackagePath="lib/$(TargetFramework)" />
     <!--<None Include="./obj/publish/**/*" Exclude="./obj/publish/Seq.Apps.OpsGenieHeartbeat.dll;./obj/publish/Seq.Apps.dll;./obj/publish/Serilog.dll" Pack="true" PackagePath="lib/$(TargetFramework)" />-->
     <!--<None Include="./bin/release/$(TargetFramework)/Flurl.dll" Pack="true" PackagePath="lib/$(TargetFramework)" />
     <None Include="./bin/release/$(TargetFramework)/Flurl.Http.dll" Pack="true" PackagePath="lib/$(TargetFramework)" />-->

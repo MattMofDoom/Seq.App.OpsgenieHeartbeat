@@ -131,11 +131,13 @@ namespace Seq.App.OpsGenieHeartbeat
             {
                 case 202:
                     LogEvent(LogEventLevel.Debug,
-                        "{AppName} send Heartbeat to {TargetUrl} : Status code {StatusCode} in {Elapsed:0.000} ms", App.Title, TargetUrl, statusCode.Result, sw.Elapsed.TotalMilliseconds);
+                        "{AppName} send Heartbeat to {TargetUrl} : Status code {StatusCode} in {Elapsed:0.000} ms",
+                        App.Title, TargetUrl, statusCode.Result, sw.Elapsed.TotalMilliseconds);
                     break;
                 default:
                     LogEvent(LogEventLevel.Warning,
-                        "{AppName} send Heartbeat to {TargetUrl} : Status code {StatusCode} in {Elapsed:0.000} ms", App.Title, TargetUrl, statusCode.Result, sw.Elapsed.TotalMilliseconds);
+                        "{AppName} send Heartbeat to {TargetUrl} : Status code {StatusCode} in {Elapsed:0.000} ms",
+                        App.Title, TargetUrl, statusCode.Result, sw.Elapsed.TotalMilliseconds);
                     break;
             }
         }
