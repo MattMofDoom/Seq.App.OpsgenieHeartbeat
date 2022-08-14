@@ -20,7 +20,7 @@
     <TreatSpecificWarningsAsErrors />
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
-    <Version>1.0.6</Version>
+    <Version>1.0.7</Version>
     <ApplicationIcon>seq-app-opsgenieheartbeat.ico</ApplicationIcon>
     <PackageIcon>seq-app-opsgenieheartbeat.png</PackageIcon>
     <PackageReleaseNotes>
@@ -36,8 +36,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Flurl" Version="3.0.4" />
-    <PackageReference Include="Flurl.Http" Version="3.2.2">
+    <PackageReference Include="Flurl" Version="3.0.6" />
+    <PackageReference Include="Flurl.Http" Version="3.2.4">
       <GeneratePathProperty>true</GeneratePathProperty>
     </PackageReference>
     <PackageReference Include="Seq.Apps" Version="2021.4.0" />
